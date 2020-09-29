@@ -1,0 +1,62 @@
+\documentclass{report}
+\usepackage{fullpage}
+\usepackage{mathtools}
+\renewcommand{\baselinestretch}{2}
+\author{Yunhua Zhao}
+\title{the probability answers}
+\begin{document}
+\maketitle
+
+
+\textbf{15.1}  $\log_{2}1000$  \\
+Use binary search, the height of the binary tree is $\log_{2}1000$
+
+\textbf{15.4}
+\begin{itemize}
+	\item \textbf{(a)} $32 = 1+{5 \choose 1}+{5 \choose 2}+{5 \choose 3}+{5 \choose 4}+{5 \choose 5}$  \\
+	Situations: only contains $x_1$, it is 1; $x_1$ and one other element, it is ${5 \choose 1}$; $x_1$ and two other elements, it is ${5 \choose 2}$; $x_1$ and three other elements, it is ${5 \choose 3}$; $x_1$ and four other elements, it is ${5 \choose 4}$; $x_1$ and five other elements, it is ${5 \choose 5}$; 
+	\item \textbf{(b)} $8 = 1+{3 \choose 1}+{3 \choose 2}+{3 \choose 3}$  \\
+	Situations: only contains $x_2$ $x_3$, it is 1; $x_2$ $x_3$ and one other element from $x_1$ $x_4$ $x_5$, it is ${3 \choose 1}$; $x_2$ $x_3$ and two other elements, it is ${3 \choose 2}$; $x_2$ $x_3$ and three other elements, it is ${3 \choose 3}$;
+\end{itemize}
+
+\textbf{15.5}
+\begin{itemize}
+	\item \textbf{a} (3 letters+3 digits)$\cup$(5 letters)$\cup$(2 characters) = $({26 \choose 1}*{26 \choose 1}*{26 \choose 1}*{10 \choose 1}*{10 \choose 1}*{10 \choose 1}) \cup ({26 \choose 1}*{26 \choose 1}*{26 \choose 1}*{26 \choose 1}*{26 \choose 1}) \cup ({36 \choose 1}*{36 \choose 1})$
+	\item \textbf{b} $29458672=1757600+11881376+1296$
+\end{itemize}
+
+\textbf{15.10}  Suppose that $(n-1)$ elements has $2^{n-1}$ subsets. If now there is 1 element more, all the $2^{n-1}$ subsets can choose if  include the new element or not, so it is  $2*2^{n-1}$, which equals to $2^n$. So $(n-1)$ elements has $2^{n-1}$ subsets in turn, which prove the hypothesis is right.
+
+\textbf{15.13} ${6 \choose 1}^{36}$
+
+\textbf{15.15} $2877={6 \choose 1}*{9 \choose 4}+{6 \choose 2}*{9 \choose 3}+{6 \choose 3}*{9 \choose 2}+{6 \choose 4}*{9 \choose 1}+{6 \choose 5}$  \\
+Use w represents woman, m represents man, the solution contains:1w+4m, 2w+3m, 3w+2m, 4w+1m, 5w.
+
+\textbf{15.21 (a)} ${21 \choose 5}*(5!)*(21!)$  \\
+Put every vowel appears to the left of a consonant so that no two vowels appear consecutively and the last letter in the ordering is not a vowel, then there are 5 pairs (vowel, consonant) which has ${21 \choose 5}*5!$ ways. Then there are 16 consonant left with 5 pairs, so there are $21!$ ways.
+
+\textbf{15.33}
+\begin{itemize}
+	\item \textbf{(a)} $10240 = {10 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}$ \\
+	There are total 10 sequence, every card has 4 suits.
+	\item \textbf{(b)} $617760 = {4 \choose 1}*{13 \choose 5}*5!$  \\
+	There are 4 suits totally, so choose one of them, each card number in an exact suit has one. And there are totally 13 cards with different numbers.
+	\item \textbf{(c)} $40={10 \choose 1}*{4 \choose 1}$  \\
+	There are total 10 sequence, and 4 suits.
+	\item \textbf{(d)} $10200 = 10240-{10 \choose 1}*{4 \choose 1}$  \\
+	According to (a), there are 10240 sequence, and there are 40 matching suits for these sequences as (c).
+	\item \textbf{(e)} $617720 = 617760-40$  \\
+	According to (b) there are 617760 matching suit, and both a sequence and a matching suit which is a straight flush is 40, according to (c).
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
