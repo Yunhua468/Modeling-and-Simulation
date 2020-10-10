@@ -1,0 +1,27 @@
+start possession:10, win probability:0.4
+average win times:18.14
+average bet times:46.28
+start possession:10, win probability:0.4864864864864865
+average win times:47.76
+average bet times:97.92
+start possession:10, win probability:0.5
+average win times:52.74
+average bet times:104.68
+start possession:100, win probability:0.4
+average win times:193.74
+average bet times:487.48
+start possession:100, win probability:0.4864864864864865
+average win times:1737.38
+average bet times:3574.76
+start possession:100, win probability:0.5
+average win times:5459.54
+average bet times:10915.08
+start possession:1000, win probability:0.4
+average win times:1995.66
+average bet times:4991.32
+start possession:1000, win probability:0.4864864864864865
+average win times:17584.54
+average bet times:36169.08
+start possession:1000, win probability:0.5
+average win times:505232.7
+average bet times:1010305.4
