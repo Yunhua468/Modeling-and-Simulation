@@ -1,0 +1,131 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{comment}
+
+\title{mit math lectures 20 and 21}
+\author{Yunhua Zhao}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Chapter 20 Summary} 
+\subsection{Independent Definition}
+\textbf{Def:} If $P(A|B)=P(A)$, then A is independent of B   \\
+
+\textbf{1.} disjoint can not get independent  \\
+   eg. two events A and B are disjoint, then $P(A|B)=0\neq P(A)$ \\
+   
+\textbf{2.}  Theorem(Product Rule For Independent Events): If A is independent of B, then $P(A\wedge B)=P(A)P(B)$ \\
+   It is an equivalent definition, which means if $P(A\wedge B)=P(A)P(B)$, then A is independent of B \\
+   
+\textbf{3.}  Theorem(Symmetry of Independence):  If A is independent of B,then  If B is independent of A  \\
+\subsection{Mutually Independent}
+\textbf{Def:}Events $A_1, A_2...$ are mutually independent,   \\
+if $\forall_i$ and $\forall J \subseteq[1,n]-{i} $, $P(A_i|\bigcap_{j\in J} A_j)=P(A_i)$ or $P(\bigcap_{j\in J} A_j) = 0$  \\
+\textbf{Equivalent Def:}(Product Rule Form):  $A_1, A_2...$ are mutually independent,  \\
+If $\forall J\subseteq[1,n]$, $P(\cap_{j\in J}A_j)=\prod_{j\in J} P(A_j)$  \\
+
+\textbf{Note: all the events are independent with each other, and put them together also independent} \\
+\subsection{Pairwise Independent}
+\textbf{Def:} Events $A_1, A_2...$ are pairwise independent, \\
+if $\forall i$, $j$ $(i\neq j)$, $A_i$ and $A_j$are independent. \\
+
+\textbf{Note: all the events are independent with each other, but put them together not sure if it is independent} 
+
+\textbf{Note:} \\
+pairwise $ \nRightarrow $ mutual  \\
+mutual $ \Rightarrow $ pairwise  \\
+
+
+Stirling's formula: $N!\thicksim \sqrt{2\pi N}(\frac{N}{e})^N$
+\subsection{Birthday Principle: x collides with y}
+hash: $L\rightarrow S$, and $L'\subseteq L$, $L'$ is pretty small, we want $L'$ after hash matched one by one  \\
+\textbf{Def:} x collides with y, if $h(x)=h(y)$, but $x\neq y$  \\
+\textbf{Def Birthday Principle:} If $|S|\geqq 100$ , $L'\subseteq L$, $|L'|\geqq 1.2\sqrt{|S|} $, and if the values of $h$ on $L'$ are random(uniform) and mutually independent, then with prob $\geqq$ 1/2, $\exists x,y\in L'$, such that $x\neq y$, but $h(x)=h(y)$
+
+
+
+
+\section{Chapter 21 Summary} 
+\subsection{Random Variable}
+\textbf{Def:} A random variable $R$ is a function  \\
+$R:S \rightarrow R$, first $IR$ is the random variable, $S$ is the sample space, the second $IR$ is the reals. \\
+\textbf{Def:} $P(R=x)=\sum^{w:R(w)=x}P(w)$, which means the probability of the random variable is $x$ equal to the probability of the event happens. Suit for the set also. \\
+\textbf{Def:} Two random variable($r.v.$) $R_1$ and $R_2$ are independent if \\
+$\forall x_1, x_2 \in IR$, $P(IR_1=x_1|IR_2=x_2)=P(IR_1=x_1)$ or $P(IR_2=x_2)$ \\
+\textbf{Equivalent Def:} $\forall x_1, x_2 \in IR$, $P(IR_1=x_1\wedge IR_2=x_2)=P(IR_1=x_1)P(IR_2=x_2)$ \\
+
+\textbf{Note: If asked to show independent, need to show everything required, if dependent just find one} \\
+\subsection{Indicator}
+\textbf{Def An indicator(known as Bernoulli or Characteristic):}  \\
+$r.v.$ is a $r.v.$ with range ${0,1}$  \\
+${w|R(w)=x}$ is the event that $R=x$, $R$ is the random variable  \\
+\subsection{Mutually Independent}
+\textbf{Def mutually independent $r.v.$:} $R_1, R_2,...$ are mutually independent  \\
+if $\forall x_1, x_2 ... \in IR$, $P(IR_1=x_1\wedge IR_2=x_2\wedge ...)=P(IR_1=x_1)P(IR_2=x_2)P(IR_3=x_3)...$ \\
+\subsection{Distribution Function}
+\textbf{Def:} Given a $rv$ $R$, the probability(also point) distribution function (pdf) for $R$ is $f(x)=P(R=x)$ \\
+\textbf{Def:} The cumulative distribution function $F$ for $R$ is $F(x)=P(R\leqq x)=\sum_{y\leqq x}P(R=y)$   \\
+\subsection{Winning Strategy---Random Guess(uniform distribution problem eg)}
+\textbf{Note:}Improve the probability to win  \\
+$1/2+(z-y)/2n\geqq 1/2+1/2n$
+\begin{comment}
+How to win when randomly choose an envelop from two to get a bigger number?  \\
+0. Envelopes contain $y$ and $z\in[0,n]$ where $y<z$  \\
+1. Player chooses $x$ uniformly in ${1/2 | 1\frac{1}{2} | 2\frac{1}{2} ... | n\frac{1}{2}}$  \\
+2. Player hopes $y<x<z$ \\
+3. Player opens random envelop to reveal $r\in{y,z}$  \\
+4. Player swaps if $r<x$ \\
+\end{comment}
+\subsection{Binomial Distribution}
+\textbf{Def Unbiased Binomial Distribution:}  \\
+$f_n(k) = {n \choose k}2^{-n}$ $n\geqslant 1$, $0\leqslant k\leqslant n$  \\
+\textbf{Def Normal Binomial Distribution:}  \\
+$f_{n,p}(k) = {n \choose k}p^k(1-p)^{n-k}$ $n\geqslant 1$, $0\leqslant k\leqslant n$, $0<p<1$ \\
+
+\textbf{Note:}Unbiased Binomial Distribution is when $p=1/2$  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
