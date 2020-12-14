@@ -34,20 +34,21 @@ $$ E_x(R_1+R_2+...+R_k)=E_x(R_1)+E_x(R_2)+...+E_x(R_k) $$
 \textbf{Note: No Independence needed}\\
 
 \section{Chapter 23 Expectation II} 
-\subsection{Thm 1. Another way to calculate expectation}
+\subsection{Thms}
+\subsubsection{Thm 1. Another way to calculate expectation}
 \textbf{Thm 1:} Given a Probability space $S$, events $A_1$, $A_2$, ... $A_n$ $\subseteq S$, then the expected number of these events to occur is $\sum_{i=1}^{n}P_r(A_i)$, where $P_r(A_i)$ is the probability $A_i$ occurs \\
 \textbf{Note: Some time use theorem 1 is much easier than expectation original definition}\\
 
-\subsection{Thm 2. bound of the probability of at least one event occurs}
+\subsubsection{Thm 2. bound of the probability of at least one event occurs}
 \textbf{Thm 2:} $P_r(T \geq 1) \leq E_x(T) $, means the probability of at least one event occurs is bounded by the expectation of events occur.  \\
 \textbf{Cor:} $P_r(T \geq 1) \leq \sum_{i=1}^{n}P_r(A_i) $  \\
 
-\subsection{Thm 3. Murphy's law}
+\subsubsection{Thm 3. Murphy's law}
 Given mutual independent events, $A_1,..., A_n$, then the prob that none of them occurs is $P_r(T=0)\leq e^{-E_x(T)}$  \\
 when proof uses $\forall x$, $1-x \leq e^{-x}$  \\
 \textbf{Cor:} If we expect 10 or more mutually independent events to occur, the prob that no event occurs is $\leq e^{-10}<1/22000$  \\
 
-\subsection{Thm 4. Product Rule for Expectation}
+\subsubsection{Thm 4. Product Rule for Expectation}
 For any \textbf{independent} r.v.'s $R_1$, $R_2$, 
 $$ E_x(R_1R_2)=E_x(R_1)E_x(R_2) $$
 \textbf{Noe ex: 6 sizes dice} $E_x(R_1R_1)=E_x(R_1^2)=\sum_{i=1}^{6}i^2P_r(R_1=1)=1/6(1+4+9+16+25+36)=15(1/6)\neg (3 1/2)^2=E_x^2(R_1)$  \\
@@ -57,12 +58,14 @@ $$ E_x(R_1R_2)=E_x(R_1)E_x(R_2) $$
 \textbf{Cor??} Given independent rv's $R$ and $T$, if $E_x(R/T)>1$, then $E_x(R)>E_x(T)$,  \textbf{No No No} \\
 
 \subsection{Deviation}
-\textbf{Def:} The variance of a rv R is denoted by $$Var(R)=E_x((R-E_x(R))^2)$$
+\subsubsection{Def:}
+The variance of a rv R is denoted by $$Var(R)=E_x((R-E_x(R))^2)$$
 deviation from mean: $R-E_x(R)$  \\
 square deviation $(R-E_x(R))^2$  \\
 var = Expectation of square deviation  \\
-
-
+\subsubsection{Standard Deviation}
+\textbf{Def:} For a rv R, the Standard Deviation of R is denoted by $$ \sigma(R)=\sqrt{var(R)}=\sqrt{E_x(dev^2)} $$
+is the root of the mean of square of deviation:  root-mean-square-deviation
 
 
 

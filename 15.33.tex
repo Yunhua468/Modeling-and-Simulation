@@ -1,0 +1,24 @@
+\documentclass{report}
+\usepackage{fullpage}
+\usepackage{mathtools}
+\renewcommand{\baselinestretch}{2}
+\author{Yunhua Zhao}
+\title{15.33}
+\begin{document}
+
+
+\textbf{15.33}
+\begin{itemize}
+	\item \textbf{(a)} $10240 = {10 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}*{4 \choose 1}$ \\
+	There are total 10 sequence, every card has 4 suits.
+	\item \textbf{(b)} $617760 = {4 \choose 1}*{13 \choose 5}*5!$  \\
+	There are 4 suits totally, so choose one of them, each card number in an exact suit has one. And there are totally 13 cards with different numbers.
+	\item \textbf{(c)} $40={10 \choose 1}*{4 \choose 1}$  \\
+	There are total 10 sequence, and 4 suits.
+	\item \textbf{(d)} $10200 = 10240-{10 \choose 1}*{4 \choose 1}$  \\
+	According to (a), there are 10240 sequence, and there are 40 matching suits for these sequences as (c).
+	\item \textbf{(e)} $617720 = 617760-40$  \\
+	According to (b) there are 617760 matching suit, and both a sequence and a matching suit which is a straight flush is 40, according to (c).
+\end{itemize}
+
+\end{document}
