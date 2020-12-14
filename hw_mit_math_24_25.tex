@@ -1,0 +1,149 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{comment}
+
+\title{mit math lectures 22 and 23}
+\author{Yunhua Zhao}
+\date{November 26, 2020}
+\begin{document}
+\maketitle
+
+\section{Lecture 24 Large Deviations} 
+\subsection{Markov's Thms}
+If R is a non-negative r.v., then $\forall x>0$, $$P_r(R)\geq \frac{E_x(R)}{x}$$ \\
+\textbf{Cor:} If R is a non-negative r.v., then $\forall c>0$, $$P_r(R\geq cE_x(R))\leq \frac{1}{c}$$ \\
+\textbf{Cor:} If $R\leq u$ for some $u\in IR$, then $\forall x<u$, $$P_r(R\leq x)\leq\frac{u-E_x(R)}{u-x}$$
+\subsection{Chebyshev's Thms(Another version of Markov's thm)} 
+$\forall x>0$, $\exists$ any r.v R, $$P_r(|R-E_x(R)|\geq x)\leq\frac{Var(R)}{x^2}$$
+\textbf{Cor:} $P_r(|R-E_x(R)|\geq c\sigma(R))\leq\frac{Var(R)}{c^2\sigma(R)} = \frac{1}{c^2}$ \\
+\subsection{Thm}
+For any rv R, 
+$$ P_r(R-E_x(R)\geq c\sigma(R))\leq\frac{1}{c^2+1} $$
+$$ P_r(R-E_x(R)\leq -c\sigma(R))\leq\frac{1}{c^2+1} $$
+\subsection{Cherrioff Bound Thm}
+Let $T_1,T_2,...,T_n$ be any mutually independent rv, such that $\forall j, 0\leq T_j \leq 1$. Let $T=\sum_{j=1}^{n}T_i$, then for any $c>1$. Then for any $c>1$, $$P_r(T\geq cE_x(T))\leq e^{-zE_x(T)}$$, where $z=c\log(c)+1-c>0$ \\
+\section{Lecture 25 Random Walks}
+\subsection{Gambler's Ruin: Same with our Monte Carlo hw description}
+Start with 1 dollar and total n dollars, each bet win 1 dollar with probability p or lose a dollar with probability $1-p$, play until win m more dollars or lose n dollars(go broke)  \\
+\subsection{Martingale}
+Probability of up move is p, probability of down move is 1-p, they are mutually independent of past moves. \\
+If p is not half, random walk is not biased.  \\
+If p is half, .... is unbiased.  \\
+\subsubsection{Win the 2.1 bet}
+\textbf{Def: $W^*$ is the event hits $T=n+m$ before it hits 0} \\
+D is the number of dollars at start  \\
+$x_n = P_r(W^*|D=n)$ \\
+\textbf{claim:}  \\
+$x_n = \left\{ \begin{array}{rcl}
+	0 & \mbox{if} & n=0 \\ 1 & \mbox{if} & n=T \\
+	p^{X_{n-1}+(1-p)X_{n+1}} & \mbox{if} & 0<n<T
+\end{array}\right.$ \\
+\textbf{When proof that, with this Def: }E is the event win the 1st bet, $\overline{E}$ is the event lose the 1st bet. \\
+If $p\neq i/2$, $X_n=A(1-p/p)^n+B(1)^n$, use boundery conditions to figure out A and B. \\
+\subsection{Thm}
+If $p<1/2$, then
+$$ P_r(win m dollars before lose n dollars)\leq (1-p)/p $$
+\subsection{Thm}
+If $p=1/2$, then
+$$ P_r(win m dollars before lose n dollars)=n/n+m $$
+\textbf{Def:} S is the steps that we hit the bdry, just as our hw how many times we play, $E_n=E_x(S|D=n)$ \\
+\textbf{Claim:} \\
+$x_n = \left\{ \begin{array}{rcl}
+0 & \mbox{if} & n=0 \\ 0 & \mbox{if} & n=T \\
+1+pE_{n+1}+(1-p)E_{n-1} & \mbox{if} & 0<n<T
+\end{array}\right.$ \\
+\subsection{Thm: Quit while you are ahead}
+If you start wiht n dollars and the prob is $1/2$, you play until you broke, then the prob of you broke is 1. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
